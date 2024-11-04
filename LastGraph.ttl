@@ -352,7 +352,10 @@ PREFIX : <http://pse.com/>
 
 # Potential Errors List 3
 :Potential_Errors\/List3 a :Potential_Errors ;
-:that_is :diffcultManeuverAtHighSpeedForLargeSizedRobots .  
+:that_is :Difficult_ManeuverAtHighSpeed_ForLargeSizedRobots ; 
+:that_is :Difficult_Different_ObstaclesDetection_ForSmallSizedRobots ; 
+:that_is :CollosionRisk_AtHighNavigationSpeed ;
+:that_is :PathPlanningInconsistencies_ForLargeRobots_AtHighNavigationSpeed .  
 
 # Potential Errors List 4
 :Potential_Errors\/List4 a :Potential_Errors ;
@@ -360,24 +363,31 @@ PREFIX : <http://pse.com/>
 
 # Potential Errors List 5
 :Potential_Errors\/List5 a :Potential_Errors ;
-:that_is :Relationship5Errors . 
+:that_is :Delayed_Missed_ObstacleDetection ;
+:that_is :Inaccurate_Localization ;
+:that_is :NavigationPathproblem .  
 
 # Potential Errors List 6
 :Potential_Errors\/List6 a :Potential_Errors ;
-:that_is :Relationship6Errors1 ; 
-:that_is :Relationship6Errors2 .
+:that_is :Skidding_AtHighSpeed_LowFrictionSurface ; 
+:that_is :StoppingDelay_AtHighSpeed_LowFrictionSurface ; 
+:that_is :StrainComponents_AtHighFriction_LowSpeed ; 
+:that_is :WearAndTearComponents_AtHighFriction_HighSpeed . 
+:that_is :SlowMovement_AtLowFriction_LowSpeed . 
 
 # Potential Errors List 7
 :Potential_Errors\/List7 a :Potential_Errors ;
-:that_is :Relationship7Errors1 . 
+:that_is :InaccurateObstacleDetection_HighSpeed_LowResolution ; 
+:that_is :NavigationProblems_HighSpeed_LowResolution .  
 
 # Potential Errors List 8
 :Potential_Errors\/List8 a :Potential_Errors ;
-:that_is :Relationship8Errors1 . 
+:that_is :HighPowerConsumption_HighSpeed_HighUpdateRate ; 
+:that_is :DelayedObstaclesDetection_HighSpeed_LowUpdateRate . 
 
 # Potential Errors List 9
 :Potential_Errors\/List9 a :Potential_Errors ;
-:that_is :Relationship9Errors1 . 
+:that_is :SuddenMovements_HighTorque_LowSpeed . 
 
 
 
