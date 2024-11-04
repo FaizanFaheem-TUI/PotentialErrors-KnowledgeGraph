@@ -372,7 +372,7 @@ PREFIX : <http://pse.com/>
 :that_is :Skidding_AtHighSpeed_LowFrictionSurface ; 
 :that_is :StoppingDelay_AtHighSpeed_LowFrictionSurface ; 
 :that_is :StrainComponents_AtHighFriction_LowSpeed ; 
-:that_is :WearAndTearComponents_AtHighFriction_HighSpeed . 
+:that_is :WearAndTearComponents_AtHighFriction_HighSpeed ; 
 :that_is :SlowMovement_AtLowFriction_LowSpeed . 
 
 # Potential Errors List 7
