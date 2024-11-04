@@ -1,0 +1,43 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+PREFIX : <http://pse.com/>
+
+# Define classes
+:Element rdf:type rdfs:Class .
+:Element_Parameter rdf:type rdfs:Class .
+:Function rdf:type rdfs:Class .
+:Function_Parameter rdf:type rdfs:Class .
+:Relationship rdf:type rdfs:Class .
+:xsd:string rdf:type rdfs:Class .
+:Potential_Errors rdf:type rdfs:Class .
+
+# Define properties with domain and range
+:has_function_parameterid rdf:type rdf:Property ;
+                         rdfs:domain :Function ;
+                         rdfs:range :Function_Parameter .
+
+:has_parameter_id rdf:type rdf:Property ;
+                   rdfs:domain :Element ;
+                   rdfs:range :Element_Parameter .
+
+:has_function_id rdf:type rdf:Property ;
+                 rdfs:domain :Element ;
+                 rdfs:range :Function .
+
+:has_relation rdf:type rdf:Property ;
+             rdfs:domain :Element ;
+             rdfs:domain :Element_Parameter ;
+             rdfs:domain :Function ;
+             rdfs:domain :Function_Parameter ;
+             rdfs:range  :Relationship .
+
+:could_lead_to rdf:type rdf:Property ;
+             rdfs:domain :Relationship ;
+             rdfs:range  :Potential_Errors .
+
+:description rdf:type rdf:Property ;
+             rdfs:domain :Element ;
+             rdfs:range  :xsd:string .
+
