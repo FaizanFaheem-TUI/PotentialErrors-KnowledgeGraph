@@ -57,7 +57,7 @@ PREFIX : <http://pse.com/>
 :has_function_id :Function\/Function6 ;
 :has_relation :Relationship\/Relationship8 .
 
-#just added now starts
+
 #Element6 Info 
 :Element\/Element7 a :Element ;
 :element_name :ActuationSystem ;
@@ -65,7 +65,6 @@ PREFIX : <http://pse.com/>
 :has_parameter_id :Element_Parameter\/EParameter9 ;
 :has_function_id :Function\/Function7 ;
 :has_relation :Relationship\/Relationship9 .
-#just added now ends
 
 # System Element Parameter
 # Element 1 info part 1
@@ -108,12 +107,11 @@ PREFIX : <http://pse.com/>
 :eparameter :UpdateRate ;
 :has_relation :Relationship\/Relationship8 . 
 
-#just added now starts
+
 # Element 7 info  
 :Element_Parameter\/EParameter9 a :Element_Parameter ;
 :eparameter :Torque ;
 :has_relation :Relationship\/Relationship9 . 
-#just added now ends
 
 # Establishing the relationship between System and Size. Between System and Velocity
 :System :has_parameter_name :Size ;
@@ -143,11 +141,9 @@ PREFIX : <http://pse.com/>
 :CPU :has_parameter_name :UpdateRate ;
 :has_relation :Relationship\/Relationship8 . 
 
-#just added now starts
 # Establishing the relationship between Actuation system and Torque. 
 :ActuationSystem :has_parameter_name :Torque ;
 :has_relation :Relationship\/Relationship9 . 
-#just added now ends
 
 # Establishing the relationship between Size and Relationalship1. And between Velocity and Relationship2, and mobile robot and size as well as velocity. Also Humdity and Relationship5
 :Size :has_relation :Relationship\/Relationship1 .
@@ -199,13 +195,11 @@ PREFIX : <http://pse.com/>
 :has_function_parameterid :Function_Parameter\/FParameter6 ;
 :has_relation :Relationship\/Relationship8 .
 
-#just added now starts
 # Acutation system function info 
 :Function\/Function7 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter7 ;
 :has_relation :Relationship\/Relationship9 .
-#just added now ends
 
 # System Function Parameter
 # System function parameter
@@ -235,12 +229,10 @@ PREFIX : <http://pse.com/>
 :function_parameter_name :Resolution ;
 :has_relation :Relationship\/Relationship7 .
 
-#just added now starts
 # CPU function parameter
 :Function_Parameter\/FParameter6 a :Function_Parameter ; 
 :function_parameter_name :UpdateRate ;
 :has_relation :Relationship\/Relationship8 .
-#just added now ends
 
 # Establishing the relationship between System and Function. Between MobileRobot and Function. Between Environment and Function
 :System :has_function_name :Navigate . 
@@ -249,9 +241,7 @@ PREFIX : <http://pse.com/>
 :Ground :has_function_name :Navigate .
 :Sensor :has_function_name :Navigate .
 :CPU :has_function_name :Navigate .
-#just added now starts
 :ActuationSystem :has_function_name :Navigate .
-#just added now ends
 
 # Establishing the relationship between Navigate and Speed
 :Navigate :has_parameter_name :Speed ;
@@ -263,9 +253,7 @@ PREFIX : <http://pse.com/>
 :has_relation :Relationship\/Relationship6 ;
 :has_relation :Relationship\/Relationship7 ;
 :has_relation :Relationship\/Relationship8 ;
-#just added now starts
 :has_relation :Relationship\/Relationship9 . 
-#just added now ends
 
 # Establishing the relationship between Speed and Relationship1 & Relationship2 & Relationship3
 :Speed :has_relation :Relationship\/Relationship1 .
@@ -276,9 +264,7 @@ PREFIX : <http://pse.com/>
 :Speed :has_relation :Relationship\/Relationship6 .
 :Speed :has_relation :Relationship\/Relationship7 .
 :Speed :has_relation :Relationship\/Relationship8 .
-#just added now starts
 :Speed :has_relation :Relationship\/Relationship9 .
-#just added now ends
 
 # Relationship 1 
 :Relationship\/Relationship1 a :Relationship ;
@@ -320,12 +306,10 @@ PREFIX : <http://pse.com/>
 :relationship_name :isRealizedBy ;
 :could_lead_to :Potential_Errors\/List8 .
 
-#just added now starts
 # Relationship 9
 :Relationship\/Relationship9 a :Relationship ;
 :relationship_name :isRealizedBy ;
 :could_lead_to :Potential_Errors\/List9 .
-#just added now ends
 
 # Establishing the relationship between List1,List2,List3 and relationships
 :Allocate :could_lead_to :Potential_Errors\/List1 .   
@@ -336,9 +320,7 @@ PREFIX : <http://pse.com/>
 :hasFunctionalRelation :could_lead_to :Potential_Errors\/List6 . 
 :isRealizedBy :could_lead_to :Potential_Errors\/List7 . 
 :isRealizedBy :could_lead_to :Potential_Errors\/List8 . 
-#just added now starts
 :isRealizedBy :could_lead_to :Potential_Errors\/List9 . 
-#just added now ends
 
 # Potential Errors List 1
 :Potential_Errors\/List1 a :Potential_Errors ;
