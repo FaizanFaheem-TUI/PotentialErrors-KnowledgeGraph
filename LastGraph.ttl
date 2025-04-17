@@ -158,9 +158,7 @@ PREFIX : <http://pse.com/>
 :Friction :has_relation :Relationship\/Relationship6 .
 :Resolution :has_relation :Relationship\/Relationship7 .
 :UpdateRate :has_relation :Relationship\/Relationship8 .
-#just added now starts
 :Torque :has_relation :Relationship\/Relationship9 .
-#just added now ends
 
 # System Function 
 # system function info 
