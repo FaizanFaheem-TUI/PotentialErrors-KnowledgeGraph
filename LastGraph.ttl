@@ -4,244 +4,209 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 PREFIX : <http://pse.com/>
 
-# System Element Info
-#Element1 Info 
+# MobileRobot Element Info
 :Element\/Element1 a :Element ;
-:element_name :System ;
+:element_name :MobileRobot ;
 :description 'Technical System'^^xsd:string ;
 :has_parameter_id :Element_Parameter\/EParameter1 ;
 :has_function_id :Function\/Function1 ;
-:has_relation :Relationship\/Relationship1 ;
-:has_parameter_id :Element_Parameter\/EParameter2 ;
-:has_relation :Relationship\/Relationship2 .
+:has_relation :Relationship\/Relationship1 . 
 
-#Element2 Info 
+# Environment Element Info
 :Element\/Element2 a :Element ;
-:element_name :MobileRobot ;
-:description 'Intelligent Technical System'^^xsd:string ;
-:has_parameter_id :Element_Parameter\/EParameter3 ;
+:element_name :Ground ;
+:description 'Influencing Factors'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter2 ;
 :has_function_id :Function\/Function2 ;
-:has_relation :Relationship\/Relationship3 ;
-:has_parameter_id :Element_Parameter\/EParameter4 ;
-:has_relation :Relationship\/Relationship4 .
+:has_relation :Relationship\/Relationship2 . 
 
-#Element3 Info 
+# Ground Element Info
 :Element\/Element3 a :Element ;
 :element_name :Environment ;
-:description 'Exteral Influences'^^xsd:string ;
-:has_parameter_id :Element_Parameter\/EParameter5 ;
+:description 'Influencing Factors'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter3 ;
 :has_function_id :Function\/Function3 ;
-:has_relation :Relationship\/Relationship5 .
+:has_relation :Relationship\/Relationship3 . 
 
-#Element4 Info 
+# Sensor Element Info
 :Element\/Element4 a :Element ;
-:element_name :Ground ;
-:description 'Exteral Influences'^^xsd:string ;
-:has_parameter_id :Element_Parameter\/EParameter6 ;
-:has_function_id :Function\/Function4 ;
-:has_relation :Relationship\/Relationship6 .
-
-#Element5 Info 
-:Element\/Element5 a :Element ;
 :element_name :Sensor ;
-:description 'Sub system'^^xsd:string ;
-:has_parameter_id :Element_Parameter\/EParameter7 ;
-:has_function_id :Function\/Function5 ;
-:has_relation :Relationship\/Relationship7 .
+:description 'Subsystem'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter4 ;
+:has_function_id :Function\/Function4 ;
+:has_relation :Relationship\/Relationship4 . 
 
-#Element6 Info 
-:Element\/Element6 a :Element ;
+# CPU Element Info
+:Element\/Element5 a :Element ;
 :element_name :CPU ;
-:description 'Sub system'^^xsd:string ;
-:has_parameter_id :Element_Parameter\/EParameter8 ;
-:has_function_id :Function\/Function6 ;
-:has_relation :Relationship\/Relationship8 .
+:description 'Subsystem'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter5 ;
+:has_function_id :Function\/Function5 ;
+:has_relation :Relationship\/Relationship5 . 
 
-
-#Element6 Info 
-:Element\/Element7 a :Element ;
+# Actuation System Element Info
+:Element\/Element6 a :Element ;
 :element_name :ActuationSystem ;
-:description 'Sub system'^^xsd:string ;
-:has_parameter_id :Element_Parameter\/EParameter9 ;
-:has_function_id :Function\/Function7 ;
-:has_relation :Relationship\/Relationship9 .
+:description 'Subsystem'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter6 ;
+:has_function_id :Function\/Function6 ;
+:has_relation :Relationship\/Relationship6 . 
 
-# System Element Parameter
-# Element 1 info part 1
+
+# MobileRobot Element Relationship with relationship1
+:MobileRobot :has_relation :Relationship\/Relationship1 . 
+
+# Ground Element Relationship with relationship2
+:Ground :has_relation :Relationship\/Relationship2 . 
+
+# Environment Element Relationship with relationship3
+:Environment :has_relation :Relationship\/Relationship3 . 
+
+# Sensor Element Relationship with relationship4
+:Sensor :has_relation :Relationship\/Relationship4 . 
+
+# CPU Element Relationship with relationship5
+:CPU :has_relation :Relationship\/Relationship5 . 
+
+# ActuationSystem Element Relationship with relationship6
+:ActuationSystem :has_relation :Relationship\/Relationship6 . 
+
+
+# MobileRobot Element Parameter
 :Element_Parameter\/EParameter1 a :Element_Parameter ;
 :eparameter :Size ;
 :has_relation :Relationship\/Relationship1 .    
 
-# Element 1 info part 2
+# Ground Element Parameter
 :Element_Parameter\/EParameter2 a :Element_Parameter ;
-:eparameter :Velocity ;
-:has_relation :Relationship\/Relationship2 .  
-
-# Element 2 info part 1 
-:Element_Parameter\/EParameter3 a :Element_Parameter ;
-:eparameter :Size ;
-:has_relation :Relationship\/Relationship3 .  
-
-# Element 2 info part 2 
-:Element_Parameter\/EParameter4 a :Element_Parameter ;
-:eparameter :Velocity ;
-:has_relation :Relationship\/Relationship4 .  
-
-# Element 3 info  
-:Element_Parameter\/EParameter5 a :Element_Parameter ;
-:eparameter :Humidity ;
-:has_relation :Relationship\/Relationship5 .  
-
-# Element 4 info  
-:Element_Parameter\/EParameter6 a :Element_Parameter ;
 :eparameter :Friction ;
-:has_relation :Relationship\/Relationship6 .  
-
-# Element 5 info  
-:Element_Parameter\/EParameter7 a :Element_Parameter ;
-:eparameter :Resoultion ;
-:has_relation :Relationship\/Relationship7 . 
-
-# Element 6 info  
-:Element_Parameter\/EParameter8 a :Element_Parameter ;
-:eparameter :UpdateRate ;
-:has_relation :Relationship\/Relationship8 . 
-
-
-# Element 7 info  
-:Element_Parameter\/EParameter9 a :Element_Parameter ;
-:eparameter :Torque ;
-:has_relation :Relationship\/Relationship9 . 
-
-# Establishing the relationship between System and Size. Between System and Velocity
-:System :has_parameter_name :Size ;
-:has_relation :Relationship\/Relationship1 . 
-:System :has_parameter_name :Velocity ;
 :has_relation :Relationship\/Relationship2 . 
 
-# Establishing the relationship between MobileRobot and Size. Between MobileRobot and Velocity
-:MobileRobot :has_parameter_name :Size ;
+# Environment Element Parameter
+:Element_Parameter\/EParameter3 a :Element_Parameter ;
+:eparameter :Humidity ;
 :has_relation :Relationship\/Relationship3 . 
-:MobileRobot :has_parameter_name :Velocity ;
+
+# Sensor Element Parameter
+:Element_Parameter\/EParameter4 a :Element_Parameter ;
+:eparameter :Resolution ;
 :has_relation :Relationship\/Relationship4 . 
 
-# Establishing the relationship between Environment and Humditiy
-:Environment :has_parameter_name :Humidity ;
-:has_relation :Relationship\/Relationship5 . 
+# CPU Element Parameter
+:Element_Parameter\/EParameter5 a :Element_Parameter ;
+:eparameter :UpdateRate ;
+:has_relation :Relationship\/Relationship5 .
 
-# Establishing the relationship between Ground and Fricition
-:Ground :has_parameter_name :Friction ;
-:has_relation :Relationship\/Relationship6 . 
+# ActuationSystem Element Parameter
+:Element_Parameter\/EParameter6 a :Element_Parameter ;
+:eparameter :Torque ;
+:has_relation :Relationship\/Relationship6 .
 
-# Establishing the relationship between Senosr and Resoultion. 
-:Sensor :has_parameter_name :Resolution ;
-:has_relation :Relationship\/Relationship7 . 
 
-# Establishing the relationship between CPU and UpdateRate. 
-:CPU :has_parameter_name :UpdateRate ;
-:has_relation :Relationship\/Relationship8 . 
-
-# Establishing the relationship between Actuation system and Torque. 
-:ActuationSystem :has_parameter_name :Torque ;
-:has_relation :Relationship\/Relationship9 . 
-
-# Establishing the relationship between Size and Relationalship1. And between Velocity and Relationship2, and mobile robot and size as well as velocity. Also Humdity and Relationship5
+# Establishing the relationship between Size and Relationalship1. 
 :Size :has_relation :Relationship\/Relationship1 .
-:Velocity :has_relation :Relationship\/Relationship2 .
-:Size :has_relation :Relationship\/Relationship3 .
-:Velocity :has_relation :Relationship\/Relationship4 .
-:Humidity :has_relation :Relationship\/Relationship5 .
-:Friction :has_relation :Relationship\/Relationship6 .
-:Resolution :has_relation :Relationship\/Relationship7 .
-:UpdateRate :has_relation :Relationship\/Relationship8 .
-:Torque :has_relation :Relationship\/Relationship9 .
 
-# System Function 
-# system function info 
+# Establishing the relationship between Friction and Relationalship2. 
+:Friction :has_relation :Relationship\/Relationship2 .
+
+# Establishing the relationship between Humidity and Relationalship3. 
+:Humidity :has_relation :Relationship\/Relationship3 .
+
+# Establishing the relationship between Resolution and Relationalship4. 
+:Resolution :has_relation :Relationship\/Relationship4 .
+
+# Establishing the relationship between UpdateRate and Relationalship5. 
+:ÚpdateRate :has_relation :Relationship\/Relationship5 .
+
+# Establishing the relationship between Torque and Relationalship6. 
+:Torque :has_relation :Relationship\/Relationship6 .
+
+
+# MobileRobot Associated Function 
 :Function\/Function1 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter1 ;
-:has_relation :Relationship\/Relationship1 ;
-:has_relation :Relationship\/Relationship2 . 
+:has_relation :Relationship\/Relationship1 . 
 
-# MobileRobot function info 
+# Ground Associated Function 
 :Function\/Function2 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter2 ;
-:has_relation :Relationship\/Relationship3 ;
-:has_relation :Relationship\/Relationship4 .
+:has_relation :Relationship\/Relationship2 . 
 
-# Environment function info 
+# Environment Associated Function 
 :Function\/Function3 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter3 ;
-:has_relation :Relationship\/Relationship5 .
+:has_relation :Relationship\/Relationship3 . 
 
-# Ground function info 
+# Sensor Associated Function 
 :Function\/Function4 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter4 ;
-:has_relation :Relationship\/Relationship6 .
+:has_relation :Relationship\/Relationship4 . 
 
-# Sensor function info 
+# CPU Associated Function 
 :Function\/Function5 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter5 ;
-:has_relation :Relationship\/Relationship7 .
+:has_relation :Relationship\/Relationship5 . 
 
-# CPU function info 
+# Actuation System Associated Function 
 :Function\/Function6 a :Function ; 
 :has_function_name :Navigate ; 
 :has_function_parameterid :Function_Parameter\/FParameter6 ;
-:has_relation :Relationship\/Relationship8 .
-
-# Acutation system function info 
-:Function\/Function7 a :Function ; 
-:has_function_name :Navigate ; 
-:has_function_parameterid :Function_Parameter\/FParameter7 ;
-:has_relation :Relationship\/Relationship9 .
-
-# System Function Parameter
-# System function parameter
-:Function_Parameter\/FParameter1 a :Function_Parameter ; 
-:function_parameter_name :Speed ;
-:has_relation :Relationship\/Relationship1 ;
-:has_relation :Relationship\/Relationship2 . 
-
-# MobileRobot function parameter
-:Function_Parameter\/FParameter2 a :Function_Parameter ; 
-:function_parameter_name :Speed ;
-:has_relation :Relationship\/Relationship3 ; 
-:has_relation :Relationship\/Relationship4 . 
-
-# Environment function parameter
-:Function_Parameter\/FParameter3 a :Function_Parameter ; 
-:function_parameter_name :Humidity ;
-:has_relation :Relationship\/Relationship5 .
-
-# Ground function parameter
-:Function_Parameter\/FParameter4 a :Function_Parameter ; 
-:function_parameter_name :Friction ;
 :has_relation :Relationship\/Relationship6 .
 
-# Ground function parameter
+
+# MobileRobot Function Parameter
+:Function_Parameter\/FParameter1 a :Function_Parameter ; 
+:function_parameter_name :Speed ;
+:has_relation :Relationship\/Relationship1 .
+
+# Ground Function Parameter
+:Function_Parameter\/FParameter2 a :Function_Parameter ; 
+:function_parameter_name :Speed ;
+:has_relation :Relationship\/Relationship2 .
+
+# Enviornemt Function Parameter
+:Function_Parameter\/FParameter3 a :Function_Parameter ; 
+:function_parameter_name :Speed ;
+:has_relation :Relationship\/Relationship3 .
+
+# Sensor Function Parameter
+:Function_Parameter\/FParameter4 a :Function_Parameter ; 
+:function_parameter_name :Speed ;
+:has_relation :Relationship\/Relationship4 .
+
+# CPU Function Parameter
 :Function_Parameter\/FParameter5 a :Function_Parameter ; 
-:function_parameter_name :Resolution ;
-:has_relation :Relationship\/Relationship7 .
+:function_parameter_name :Speed ;
+:has_relation :Relationship\/Relationship5 .
 
-# CPU function parameter
+# Actuation System Function Parameter
 :Function_Parameter\/FParameter6 a :Function_Parameter ; 
-:function_parameter_name :UpdateRate ;
-:has_relation :Relationship\/Relationship8 .
+:function_parameter_name :Toqrue ;
+:has_relation :Relationship\/Relationship6 .
 
-# Establishing the relationship between System and Function. Between MobileRobot and Function. Between Environment and Function
-:System :has_function_name :Navigate . 
-:MobileRobot :has_function_name :Navigate .
-:Environment :has_function_name :Navigate .
-:Ground :has_function_name :Navigate .
-:Sensor :has_function_name :Navigate .
-:CPU :has_function_name :Navigate .
-:ActuationSystem :has_function_name :Navigate .
+
+# Establishing the relationship between MobileRobot and Function. 
+:MobileRobot :has_function_name :Navigate . 
+
+# Establishing the relationship between Ground and Function. 
+:Ground :has_function_name :Navigate . 
+
+# Establishing the relationship between Environment and Function. 
+:Environment :has_function_name :Navigate . 
+
+# Establishing the relationship between Sensor and Function. 
+:Sensor :has_function_name :Navigate . 
+
+# Establishing the relationship between CPU and Function. 
+:CPU :has_function_name :Navigate . 
+
+# Establishing the relationship between Actuation System and Function. 
+:ActuationSystem :has_function_name :Navigate . 
 
 # Establishing the relationship between Navigate and Speed
 :Navigate :has_parameter_name :Speed ;
@@ -250,21 +215,15 @@ PREFIX : <http://pse.com/>
 :has_relation :Relationship\/Relationship3 ;
 :has_relation :Relationship\/Relationship4 ;
 :has_relation :Relationship\/Relationship5 ;
-:has_relation :Relationship\/Relationship6 ;
-:has_relation :Relationship\/Relationship7 ;
-:has_relation :Relationship\/Relationship8 ;
-:has_relation :Relationship\/Relationship9 . 
+:has_relation :Relationship\/Relationship6 .
 
-# Establishing the relationship between Speed and Relationship1 & Relationship2 & Relationship3
+# Establishing the relationship between Speed and Relationship1 & Relationship2 & Relationship3 and so on
 :Speed :has_relation :Relationship\/Relationship1 .
 :Speed :has_relation :Relationship\/Relationship2 .
 :Speed :has_relation :Relationship\/Relationship3 .
 :Speed :has_relation :Relationship\/Relationship4 .
 :Speed :has_relation :Relationship\/Relationship5 .
 :Speed :has_relation :Relationship\/Relationship6 .
-:Speed :has_relation :Relationship\/Relationship7 .
-:Speed :has_relation :Relationship\/Relationship8 .
-:Speed :has_relation :Relationship\/Relationship9 .
 
 # Relationship 1 
 :Relationship\/Relationship1 a :Relationship ;
@@ -273,101 +232,70 @@ PREFIX : <http://pse.com/>
 
 # Relationship 2 
 :Relationship\/Relationship2 a :Relationship ;
-:relationship_name :Allocate ;
-:could_lead_to :Potential_Errors\/List2 .
+:relationship_name :hasFunctionalRelation ;
+:could_lead_to :Potential_Errors\/List2 . 
 
-# Relationship 3 
+# Relationship 3
 :Relationship\/Relationship3 a :Relationship ;
-:relationship_name :Allocate ;
-:could_lead_to :Potential_Errors\/List3 .
+:relationship_name :hasFunctionalRelation ;
+:could_lead_to :Potential_Errors\/List3 . 
 
 # Relationship 4
 :Relationship\/Relationship4 a :Relationship ;
-:relationship_name :Allocate ;
-:could_lead_to :Potential_Errors\/List4 .
+:relationship_name :isRealizedBy ;
+:could_lead_to :Potential_Errors\/List4 . 
 
 # Relationship 5
 :Relationship\/Relationship5 a :Relationship ;
-:relationship_name :hasFunctionalRelation ;
+:relationship_name :isRealizedBy ;
 :could_lead_to :Potential_Errors\/List5 .
 
 # Relationship 6
 :Relationship\/Relationship6 a :Relationship ;
-:relationship_name :hasFunctionalRelation ;
+:relationship_name :isRealizedBy ;
 :could_lead_to :Potential_Errors\/List6 .
 
-# Relationship 7
-:Relationship\/Relationship7 a :Relationship ;
-:relationship_name :isRealizedBy ;
-:could_lead_to :Potential_Errors\/List7 .
-
-# Relationship 8
-:Relationship\/Relationship8 a :Relationship ;
-:relationship_name :isRealizedBy ;
-:could_lead_to :Potential_Errors\/List8 .
-
-# Relationship 9
-:Relationship\/Relationship9 a :Relationship ;
-:relationship_name :isRealizedBy ;
-:could_lead_to :Potential_Errors\/List9 .
 
 # Establishing the relationship between List1,List2,List3 and relationships
-:Allocate :could_lead_to :Potential_Errors\/List1 .   
-:Allocate :could_lead_to :Potential_Errors\/List2 . 
-:Allocate :could_lead_to :Potential_Errors\/List3 . 
-:Allocate :could_lead_to :Potential_Errors\/List4 . 
-:hasFunctionalRelation :could_lead_to :Potential_Errors\/List5 . 
-:hasFunctionalRelation :could_lead_to :Potential_Errors\/List6 . 
-:isRealizedBy :could_lead_to :Potential_Errors\/List7 . 
-:isRealizedBy :could_lead_to :Potential_Errors\/List8 . 
-:isRealizedBy :could_lead_to :Potential_Errors\/List9 . 
+:Allocate :could_lead_to :Potential_Errors\/List1 . 
+:hasFunctionalRelation :could_lead_to :Potential_Errors\/List2 . 
+:hasFunctionalRelation :could_lead_to :Potential_Errors\/List3 . 
+:isRealizedBy  :could_lead_to :Potential_Errors\/List4 . 
+:isRealizedBy  :could_lead_to :Potential_Errors\/List5 . 
+:isRealizedBy  :could_lead_to :Potential_Errors\/List6 . 
 
 # Potential Errors List 1
 :Potential_Errors\/List1 a :Potential_Errors ;
-:that_is :Relationship1Errors . 
-
-# Potential Errors List 2
-:Potential_Errors\/List2 a :Potential_Errors ;
-:that_is :Relationship2Errors . 
-
-# Potential Errors List 3
-:Potential_Errors\/List3 a :Potential_Errors ;
-:that_is :Difficult_ManeuverAtHighSpeed_ForLargeSizedRobots ; 
+:that_is :Difficult_ManeuverAtHighSpeed_ForLargeSizedRobots ;
 :that_is :Difficult_Different_ObstaclesDetection_ForSmallSizedRobots ; 
 :that_is :CollosionRisk_AtHighNavigationSpeed ;
 :that_is :PathPlanningInconsistencies_ForLargeRobots_AtHighNavigationSpeed .  
 
-# Potential Errors List 4
-:Potential_Errors\/List4 a :Potential_Errors ;
-:that_is :Relationship4Errors . 
-
-# Potential Errors List 5
-:Potential_Errors\/List5 a :Potential_Errors ;
-:that_is :Delayed_Missed_ObstacleDetection ;
-:that_is :Inaccurate_Localization ;
-:that_is :NavigationPathproblem .  
-
-# Potential Errors List 6
-:Potential_Errors\/List6 a :Potential_Errors ;
+# Potential Errors List 2
+:Potential_Errors\/List2 a :Potential_Errors ;
 :that_is :Skidding_AtHighSpeed_LowFrictionSurface ; 
 :that_is :StoppingDelay_AtHighSpeed_LowFrictionSurface ; 
 :that_is :StrainComponents_AtHighFriction_LowSpeed ; 
 :that_is :WearAndTearComponents_AtHighFriction_HighSpeed ; 
 :that_is :SlowMovement_AtLowFriction_LowSpeed . 
 
-# Potential Errors List 7
-:Potential_Errors\/List7 a :Potential_Errors ;
+# Potential Errors List 3
+:Potential_Errors\/List3 a :Potential_Errors ;
+:that_is :Slipping_HighSpeed_HighHumidity_LowResolution ; 
+:that_is :InaccurateObstacleDetection_HighHumidity_LowResolution . 
+
+
+# Potential Errors List 4
+:Potential_Errors\/List4 a :Potential_Errors ;
 :that_is :InaccurateObstacleDetection_HighSpeed_LowResolution ; 
 :that_is :NavigationProblems_HighSpeed_LowResolution .  
+ 
 
-# Potential Errors List 8
-:Potential_Errors\/List8 a :Potential_Errors ;
+# Potential Errors List 5
+:Potential_Errors\/List5 a :Potential_Errors ;
 :that_is :HighPowerConsumption_HighSpeed_HighUpdateRate ; 
 :that_is :DelayedObstaclesDetection_HighSpeed_LowUpdateRate . 
 
-# Potential Errors List 9
-:Potential_Errors\/List9 a :Potential_Errors ;
+# Potential Errors List 6
+:Potential_Errors\/List6 a :Potential_Errors ;
 :that_is :SuddenMovements_HighTorque_LowSpeed . 
-
-
-
