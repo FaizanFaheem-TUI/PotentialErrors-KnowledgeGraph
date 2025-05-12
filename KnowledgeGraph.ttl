@@ -52,6 +52,53 @@ PREFIX : <http://pse.com/>
 :has_function_id :Function\/Function6 ;
 :has_relation :Relationship\/Relationship6 . 
 
+# Obstacle Element Info for parameter one
+:Element\/Element7 a :Element ;
+:element_name :Obstacle ;
+:description 'Environmental Object'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter7 ;
+:has_function_id :Function\/Function7 ;
+:has_relation :Relationship\/Relationship7 . 
+
+# Obstacle Element Info for parameter one
+:Element\/Element8 a :Element ;
+:element_name :Obstacle ;
+:description 'Environmental Object'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter8 ;
+:has_function_id :Function\/Function8 ;
+:has_relation :Relationship\/Relationship8 . 
+
+# Sensor Element Info for Detect Obstacle function
+:Element\/Element9 a :Element ;
+:element_name :Sensor ;
+:description 'Subsystem'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter9 ;
+:has_function_id :Function\/Function9 ;
+:has_relation :Relationship\/Relationship9 . 
+
+# CPU Info for Detect Obstacle function
+:Element\/Element10 a :Element ;
+:element_name :CPU ;
+:description 'Subsystem'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter10 ;
+:has_function_id :Function\/Function10 ;
+:has_relation :Relationship\/Relationship10 . 
+
+# Environment Info for Detect Obstacle function
+:Element\/Element11 a :Element ;
+:element_name :Environment ;
+:description 'Environmentalelement'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter11 ;
+:has_function_id :Function\/Function11 ;
+:has_relation :Relationship\/Relationship11 . 
+
+# MobileRobot Info for Detect Obstacle function
+:Element\/Element12 a :Element ;
+:element_name :MobileRobot ;
+:description 'System'^^xsd:string ;
+:has_parameter_id :Element_Parameter\/EParameter12 ;
+:has_function_id :Function\/Function12 ;
+:has_relation :Relationship\/Relationship12 . 
 
 # MobileRobot Element Relationship with relationship1
 :MobileRobot :has_relation :Relationship\/Relationship1 . 
@@ -71,6 +118,23 @@ PREFIX : <http://pse.com/>
 # ActuationSystem Element Relationship with relationship6
 :ActuationSystem :has_relation :Relationship\/Relationship6 . 
 
+# Obstacle Element Relationship with relationship7
+:Obstacle :has_relation :Relationship\/Relationship7 . 
+
+# Obstacle Element Relationship with relationship8
+:Obstacle :has_relation :Relationship\/Relationship8 .
+
+# Sesnor Element Relationship with relationship9
+:Sensor :has_relation :Relationship\/Relationship9 .
+
+# CPU Element Relationship with relationship10
+:CPU :has_relation :Relationship\/Relationship10 .
+
+# Environment Element Relationship with relationship11
+:Environment :has_relation :Relationship\/Relationship11 .
+
+# MobileRobot Element Relationship with relationship12
+:MobileRobot :has_relation :Relationship\/Relationship12 .
 
 # MobileRobot Element Parameter
 :Element_Parameter\/EParameter1 a :Element_Parameter ;
@@ -102,6 +166,35 @@ PREFIX : <http://pse.com/>
 :eparameter :Torque ;
 :has_relation :Relationship\/Relationship6 .
 
+# Obstacle Element Parameter
+:Element_Parameter\/EParameter7 a :Element_Parameter ;
+:eparameter :Velocity ;
+:has_relation :Relationship\/Relationship7 .
+
+# Obstacle Element Parameter
+:Element_Parameter\/EParameter8 a :Element_Parameter ;
+:eparameter :Size ;
+:has_relation :Relationship\/Relationship8 .
+
+# Sensor Element Parameter 
+:Element_Parameter\/EParameter9 a :Element_Parameter ;
+:eparameter :Resolution ;
+:has_relation :Relationship\/Relationship9 .
+
+# CPU Element Parameter 
+:Element_Parameter\/EParameter10 a :Element_Parameter ;
+:eparameter :UpdateRate ;
+:has_relation :Relationship\/Relationship10 .
+
+# Environment Element Parameter 
+:Element_Parameter\/EParameter11 a :Element_Parameter ;
+:eparameter :Humidity ;
+:has_relation :Relationship\/Relationship11 .
+
+# MobileRobot Element Parameter 
+:Element_Parameter\/EParameter12 a :Element_Parameter ;
+:eparameter :Size ;
+:has_relation :Relationship\/Relationship12 .
 
 # Establishing the relationship between Size and Relationalship1. 
 :Size :has_relation :Relationship\/Relationship1 .
@@ -121,6 +214,23 @@ PREFIX : <http://pse.com/>
 # Establishing the relationship between Torque and Relationalship6. 
 :Torque :has_relation :Relationship\/Relationship6 .
 
+# Establishing the relationship between Velocity and Relationalship7. 
+:Velocity :has_relation :Relationship\/Relationship7 .
+
+# Establishing the relationship between Size and Relationalship8. 
+:Size :has_relation :Relationship\/Relationship8 .
+
+# Establishing the relationship between Resolution and Relationalship9. 
+:Resolution :has_relation :Relationship\/Relationship9 .
+
+# Establishing the relationship between UpdateRate and Relationalship10. 
+:UpdateRate :has_relation :Relationship\/Relationship10 .
+
+# Establishing the relationship between Humidity and Relationalship11. 
+:Humidity :has_relation :Relationship\/Relationship11 .
+
+# Establishing the relationship between Size and Relationalship12. 
+:Size :has_relation :Relationship\/Relationship12 .
 
 # MobileRobot Associated Function 
 :Function\/Function1 a :Function ; 
@@ -158,6 +268,35 @@ PREFIX : <http://pse.com/>
 :has_function_parameterid :Function_Parameter\/FParameter6 ;
 :has_relation :Relationship\/Relationship6 .
 
+# Obstacle Associated Function 
+:Function\/Function7 a :Function ; 
+:has_function_name :DetectObstacle ; 
+:has_function_parameterid :Function_Parameter\/FParameter7 ;
+:has_relation :Relationship\/Relationship7 .
+
+# Obstacle Associated Function 
+:Function\/Function8 a :Function ; 
+:has_function_name :DetectObstacle ; 
+:has_function_parameterid :Function_Parameter\/FParameter8 ;
+:has_relation :Relationship\/Relationship8 .
+
+# Sensor Associated Function 
+:Function\/Function9 a :Function ; 
+:has_function_name :DetectObstacle ; 
+:has_function_parameterid :Function_Parameter\/FParameter9 ;
+:has_relation :Relationship\/Relationship9 .
+
+# CPU Associated Function 
+:Function\/Function10 a :Function ; 
+:has_function_name :DetectObstacle ; 
+:has_function_parameterid :Function_Parameter\/FParameter10 ;
+:has_relation :Relationship\/Relationship10 .
+
+# Environment Associated Function 
+:Function\/Function11 a :Function ; 
+:has_function_name :DetectObstacle ; 
+:has_function_parameterid :Function_Parameter\/FParameter11 ;
+:has_relation :Relationship\/Relationship11 .
 
 # MobileRobot Function Parameter
 :Function_Parameter\/FParameter1 a :Function_Parameter ; 
@@ -186,9 +325,38 @@ PREFIX : <http://pse.com/>
 
 # Actuation System Function Parameter
 :Function_Parameter\/FParameter6 a :Function_Parameter ; 
-:function_parameter_name :Toqrue ;
+:function_parameter_name :Speed ;
 :has_relation :Relationship\/Relationship6 .
 
+# Obstacle Function Parameter
+:Function_Parameter\/FParameter7 a :Function_Parameter ; 
+:function_parameter_name :DetectionRate ;
+:has_relation :Relationship\/Relationship7 .
+
+# Obstacle Function Parameter
+:Function_Parameter\/FParameter8 a :Function_Parameter ; 
+:function_parameter_name :DetectionRate ;
+:has_relation :Relationship\/Relationship8 .
+
+# Sensor Function Parameter
+:Function_Parameter\/FParameter9 a :Function_Parameter ; 
+:function_parameter_name :DetectionRate ;
+:has_relation :Relationship\/Relationship9 .
+
+# CPU Function Parameter
+:Function_Parameter\/FParameter10 a :Function_Parameter ; 
+:function_parameter_name :UpdateRate ;
+:has_relation :Relationship\/Relationship10 .
+
+# Environment Function Parameter
+:Function_Parameter\/FParameter11 a :Function_Parameter ; 
+:function_parameter_name :Humidity ;
+:has_relation :Relationship\/Relationship11 .
+
+# MobileRobot Function Parameter
+:Function_Parameter\/FParameter12 a :Function_Parameter ; 
+:function_parameter_name :Size ;
+:has_relation :Relationship\/Relationship12 .
 
 # Establishing the relationship between MobileRobot and Function. 
 :MobileRobot :has_function_name :Navigate . 
@@ -208,7 +376,22 @@ PREFIX : <http://pse.com/>
 # Establishing the relationship between Actuation System and Function. 
 :ActuationSystem :has_function_name :Navigate . 
 
-# Establishing the relationship between Navigate and Speed
+# Establishing the relationship between Obstacle and Function. 
+:Obstacle :has_function_name :DetectObstacle .
+
+# Establishing the relationship between Sensor and Function. 
+:Sensor :has_function_name :DetectObstacle .
+
+# Establishing the relationship between CPU and Function. 
+:CPU :has_function_name :DetectObstacle .
+
+# Establishing the relationship between Environment and Function. 
+:Environment :has_function_name :DetectObstacle .
+
+# Establishing the relationship between MobileRobot and Function. 
+:MobileRobot :has_function_name :DetectObstacle .
+
+# Establishing the relationship between Navigate and Speed. Also between DetectObstacle and DetectionRate
 :Navigate :has_parameter_name :Speed ;
 :has_relation :Relationship\/Relationship1 ;
 :has_relation :Relationship\/Relationship2 ;
@@ -216,6 +399,13 @@ PREFIX : <http://pse.com/>
 :has_relation :Relationship\/Relationship4 ;
 :has_relation :Relationship\/Relationship5 ;
 :has_relation :Relationship\/Relationship6 .
+:DetectObstacle :has_parameter_name :DetectionRate ;
+:has_relation :Relationship\/Relationship7 ;
+:has_relation :Relationship\/Relationship8 ;
+:has_relation :Relationship\/Relationship9 ;
+:has_relation :Relationship\/Relationship10 ;
+:has_relation :Relationship\/Relationship11 ;
+:has_relation :Relationship\/Relationship12 .
 
 # Establishing the relationship between Speed and Relationship1 & Relationship2 & Relationship3 and so on
 :Speed :has_relation :Relationship\/Relationship1 .
@@ -224,6 +414,12 @@ PREFIX : <http://pse.com/>
 :Speed :has_relation :Relationship\/Relationship4 .
 :Speed :has_relation :Relationship\/Relationship5 .
 :Speed :has_relation :Relationship\/Relationship6 .
+:DetectionRate :has_relation :Relationship\/Relationship7 .
+:DetectionRate :has_relation :Relationship\/Relationship8 .
+:DetectionRate :has_relation :Relationship\/Relationship9 .
+:DetectionRate :has_relation :Relationship\/Relationship10 .
+:DetectionRate :has_relation :Relationship\/Relationship11 .
+:DetectionRate :has_relation :Relationship\/Relationship12 .
 
 # Relationship 1 
 :Relationship\/Relationship1 a :Relationship ;
@@ -255,6 +451,35 @@ PREFIX : <http://pse.com/>
 :relationship_name :isRealizedBy ;
 :could_lead_to :Potential_Errors\/List6 .
 
+# Relationship 7
+:Relationship\/Relationship7 a :Relationship ;
+:relationship_name :hasFunctionalRelation ;
+:could_lead_to :Potential_Errors\/List7 .
+
+# Relationship 8
+:Relationship\/Relationship8 a :Relationship ;
+:relationship_name :hasFunctionalRelation ;
+:could_lead_to :Potential_Errors\/List8 .
+
+# Relationship 9
+:Relationship\/Relationship9 a :Relationship ;
+:relationship_name :isRealizedBy ;
+:could_lead_to :Potential_Errors\/List9 .
+
+# Relationship 10
+:Relationship\/Relationship10 a :Relationship ;
+:relationship_name :isRealizedBy ;
+:could_lead_to :Potential_Errors\/List10 .
+
+# Relationship 11
+:Relationship\/Relationship11 a :Relationship ;
+:relationship_name :hasFunctionalRelation ;
+:could_lead_to :Potential_Errors\/List11 .
+
+# Relationship 12
+:Relationship\/Relationship12 a :Relationship ;
+:relationship_name :Allocate ;
+:could_lead_to :Potential_Errors\/List12 .
 
 # Establishing the relationship between List1,List2,List3 and relationships
 :Allocate :could_lead_to :Potential_Errors\/List1 . 
@@ -263,6 +488,12 @@ PREFIX : <http://pse.com/>
 :isRealizedBy  :could_lead_to :Potential_Errors\/List4 . 
 :isRealizedBy  :could_lead_to :Potential_Errors\/List5 . 
 :isRealizedBy  :could_lead_to :Potential_Errors\/List6 . 
+:hasFunctionalRelation  :could_lead_to :Potential_Errors\/List7 . 
+:hasFunctionalRelation  :could_lead_to :Potential_Errors\/List8 .
+:isRealizedBy  :could_lead_to :Potential_Errors\/List9 .
+:isRealizedBy  :could_lead_to :Potential_Errors\/List10 .
+:hasFunctionalRelation  :could_lead_to :Potential_Errors\/List11 .
+:Allocate  :could_lead_to :Potential_Errors\/List12 .
 
 # Potential Errors List 1
 :Potential_Errors\/List1 a :Potential_Errors ;
@@ -299,3 +530,31 @@ PREFIX : <http://pse.com/>
 # Potential Errors List 6
 :Potential_Errors\/List6 a :Potential_Errors ;
 :that_is :SuddenMovements_HighTorque_LowSpeed . 
+
+# Potential Errors List 7
+:Potential_Errors\/List7 a :Potential_Errors ;
+:that_is :UnableToDetectObstacle_AtHighObstacleVelocity_AtLowDetectionRateOfDetectionFunction ;
+:that_is :DelayedDetectionOfObstacle_AtHighObstacleVelocity_AtLowDetectionRateOfDetectionFunction ;
+:that_is :IncorrectClassificationOfObstacleAsStatic_AtLowObstacleVelocity_AtLowDetectionRateOfDetectionFunction . 
+
+# Potential Errors List 8
+:Potential_Errors\/List8 a :Potential_Errors ;
+:that_is :UnableToDetectObstacle_AtSmallObstacleSize_AtLowUpdateRateOfDetectionFunction ;
+:that_is :MisclassifyingSingleLargeObstacleAsMultipleObjects_AtLargeObstacleSize_AtLowDetectionRateOfDetectionFunction . 
+
+# Potential Errors List 9
+:Potential_Errors\/List9 a :Potential_Errors ;
+:that_is :UnableToDetectSmallObstacle_AtLowSensorResolution_AtLowDetectionRateOfDetectionFunction ; 
+:that_is :UnableToDetectObstacleType_AtLowSensorResolution_AtLowDetectionRateOfDetectionFunction .
+
+# Potential Errors List 10
+:Potential_Errors\/List10 a :Potential_Errors ;
+:that_is :DelayedObstacleDetection_AtLowCPUUpdateRate_AtHighDetectionRateOfDetectionFunction .
+
+# Potential Errors List 11
+:Potential_Errors\/List11 a :Potential_Errors ;
+:that_is :ReducedDetectionRange_AtHighEnviornmentalHumidity_AtHighDetectionRateOfDetectionFunction . 
+
+# Potential Errors List 12
+:Potential_Errors\/List12 a :Potential_Errors ;
+:that_is :MissedObstacleDetection_AtSmallRobotSize_AtHighDetectionRateOfDetectionFunction . 
